@@ -1,0 +1,6 @@
+<f:if condition="{data.header}">
+    <h>{data.header}</h>
+</f:if>
+<f:if condition="{data.bodytext}">
+    {data.bodytext -> f:format.html()}
+</f:if>
