@@ -2,5 +2,6 @@
     <h>{data.header}</h>
 </f:if>
 <f:if condition="{data.bodytext}">
+    <div = 'alert alert-warning'></div>
     {data.bodytext -> f:format.html()}
 </f:if>
