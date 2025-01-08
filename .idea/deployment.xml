@@ -6,6 +6,7 @@
         <serverdata>
           <mappings>
             <mapping deploy="/cms24" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/girlie24" local="$PROJECT_DIR$/../girlie24" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -1,0 +1,59 @@
+#page-header {
+  background-color: $navbar-bg-color;
+  padding: $navbar-padding;
+
+  #mainnavigation {
+    background-color: $navbar-item-bg-color;
+    border: 1px solid $navbar-border-color;
+    display: flex;
+    justify-content: center;
+
+    // Standard-Styling für große Bildschirme
+    nav {
+      display: flex;
+
+      a {
+        color: $navbar-item-color;
+        text-decoration: none;
+        margin: 0 10px; // Abstand zwischen den Elementen
+        font-size: 16px;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline; // Optional: Hover-Effekt
+        }
+      }
+    }
+
+    // Styling für kleinere Bildschirme
+    @media (max-width: 991px) {
+      display: none; // Navigation standardmäßig ausblenden
+      flex-direction: column; // Elemente vertikal anordnen
+      position: absolute; // Damit das Dropdown über dem Inhalt liegt
+      top: 60px; // Abstand von oben
+      left: 0;
+      width: 100%; // Navigation über die gesamte Breite
+      background-color: $navbar-item-bg-color;
+
+      a {
+        margin: 10px 0; // Vertikale Abstände
+        text-align: center; // Zentrierter Text
+      }
+    }
+  }
+
+  // Hamburger-Button
+  .menu-toggle {
+    display: none; // Standardmäßig ausgeblendet
+
+    @media (max-width: 768px) {
+      display: block; // Zeige den Button bei kleinen Bildschirmen
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+
