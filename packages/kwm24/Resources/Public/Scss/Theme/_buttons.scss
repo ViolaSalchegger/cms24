@@ -53,3 +53,31 @@ a.btn {
     color: inherit !important; // Text innerhalb übernimmt die Farbe
   }
 }
+
+.buttonlogin{
+  background-color: pink !important; // Rosa Hintergrund
+  color: white !important; // Weißer Text
+  border: 2px solid pink !important; // Rosa Rahmen
+  padding: 10px 20px; // Optional: Innenabstand
+  font-size: 16px; // Optional: Schriftgröße
+  border-radius: 5px; // Optional: Abgerundete Ecken
+  text-decoration: none !important; // Entfernt Unterstreichung
+  display: inline-block; // Sicherstellen, dass es wie ein Button aussieht
+  transition: all 0.3s ease; // Glatter Übergang für den Hover-Effekt
+
+
+  &:hover {
+    background-color: white !important; // Weißer Hintergrund
+    color: pink !important; // Rosa Text
+    border-color: pink !important; // Rahmen bleibt rosa
+  }
+
+  &:focus,
+  &:active {
+    outline: none; // Entfernt Fokus-Rahmen
+  }
+
+  span.text-quaternary {
+    color: inherit !important; // Text innerhalb übernimmt die Farbe
+  }
+}
