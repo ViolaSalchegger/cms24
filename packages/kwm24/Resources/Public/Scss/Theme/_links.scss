@@ -1,0 +1,51 @@
+a {
+  color: pink; // Setzt die Linkfarbe auf Pink
+  text-decoration: hotpink; // Entfernt die Standard-Unterstreichung (optional)
+  text-decoration: hotpink;
+}
+
+.headline-pink {
+  color: pink;
+}
+
+.social-media {
+  color: #5e2170; // Farbe auf Violett setzen
+  //text-decoration: underline; // Unterstrichen darstellen
+
+  &:hover {
+    color: #5e2170; // Optional: dunkleres Violett bei Hover
+    text-decoration: underline; // Optional: Unterstrich auch bei Hover
+  }
+  display: flex;
+  flex-direction: column; // Links untereinander anordnen
+  gap: 10px; // Abstand zwischen den Links
+}
+.social-media-links {
+  display: flex;
+  flex-direction: column;  // Links untereinander anordnen
+  gap: 20px;  // Abstand zwischen den Links
+  padding: 10px 0;  // Optional: padding für den Container
+}
+
+.social-media-link {
+  color: #5e2170; // Linkfarbe auf Violett setzen
+  text-decoration: none; // Unterstrichen entfernen
+  display: flex; // Flexbox für Icon und Text nebeneinander
+  align-items: center; // Vertikale Ausrichtung des Texts und Icons
+  font-size: 18px; // Textgröße anpassen
+  font-weight: bold; // Optional: fett
+
+  i {
+    margin-right: 15px; // Abstand zwischen Icon und Text
+    font-size: 2rem;  // Icon-Größe erhöhen
+  }
+
+  &:hover {
+    color: violet; // Hover-Effekt: dunkleres Violett
+    text-decoration: none; // Sicherstellen, dass beim Hover keine Unterstreichung erscheint
+  }
+}
+
+
+
+

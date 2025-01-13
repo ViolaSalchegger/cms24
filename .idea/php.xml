@@ -42,6 +42,8 @@
       <path value="$PROJECT_DIR$/vendor/typo3/cms-core" />
       <path value="$PROJECT_DIR$/vendor/typo3/cms-t3editor" />
       <path value="$PROJECT_DIR$/vendor/typo3/cms-felogin" />
+      <path value="$PROJECT_DIR$/vendor/derhansen/sf_event_mgt" />
+      <path value="$PROJECT_DIR$/vendor/mask/mask" />
     </include_path>
   </component>
   <component name="PhpStanOptionsConfiguration">

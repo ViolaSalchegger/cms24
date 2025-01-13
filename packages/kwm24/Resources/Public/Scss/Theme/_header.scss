@@ -1,59 +1,52 @@
 #page-header {
   background-color: $navbar-bg-color;
   padding: $navbar-padding;
-
-  #mainnavigation {
-    background-color: $navbar-item-bg-color;
-    border: 1px solid $navbar-border-color;
-    display: flex;
-    justify-content: center;
-
-    // Standard-Styling für große Bildschirme
-    nav {
-      display: flex;
-
-      a {
-        color: $navbar-item-color;
-        text-decoration: none;
-        margin: 0 10px; // Abstand zwischen den Elementen
-        font-size: 16px;
-        font-weight: bold;
-
-        &:hover {
-          text-decoration: underline; // Optional: Hover-Effekt
-        }
-      }
-    }
-
-    // Styling für kleinere Bildschirme
-    @media (max-width: 991px) {
-      display: none; // Navigation standardmäßig ausblenden
-      flex-direction: column; // Elemente vertikal anordnen
-      position: absolute; // Damit das Dropdown über dem Inhalt liegt
-      top: 60px; // Abstand von oben
-      left: 0;
-      width: 100%; // Navigation über die gesamte Breite
-      background-color: $navbar-item-bg-color;
-
-      a {
-        margin: 10px 0; // Vertikale Abstände
-        text-align: center; // Zentrierter Text
-      }
-    }
-  }
-
-  // Hamburger-Button
-  .menu-toggle {
-    display: none; // Standardmäßig ausgeblendet
-
-    @media (max-width: 768px) {
-      display: block; // Zeige den Button bei kleinen Bildschirmen
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-  }
+  position: relative;
 }
 
+#mainnavigation {
+  border: 1px solid black; /* Schwarzer Rahmen für die Navigation */
+  background-color: $navbar-item-bg-color;
+  transition: transform 0.3s ease; /* Sanfter Übergang */
 
+  /* Standardposition für große Bildschirme */
+  position: static;
+  transform: translateY(0); /* Keine Bewegung */
+}
+
+button.navbar-toggler {
+  display: none; /* Toggler-Button standardmäßig ausblenden */
+}
+
+/* Styling für Bildschirme ab der Hälfte (Breakpoints anpassen) */
+@media (max-width: 991px) { /* Breakpoint: Hälfte des Bildschirms (960px bei Full HD) */
+  #mainnavigation {
+    position: absolute;
+    top: 100%; /* Direkt unter der oberen Leiste */
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%); /* Navigation standardmäßig ausgeblendet */
+    z-index: 1000; /* Über dem Inhalt anzeigen */
+  }
+
+  button.navbar-toggler {
+    display: block; /* Toggler-Button einblenden */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100; /* Sicherstellen, dass der Button klickbar bleibt */
+  }
+
+  /* Navigation einblenden, wenn der Toggler aktiviert ist */
+  button.navbar-toggler[aria-expanded="true"] ~ #mainnavigation {
+    transform: translateY(0); /* Navigation sichtbar machen */
+  }
+
+  button.navbar-toggler[aria-expanded="false"] ~ #mainnavigation {
+    transform: translateY(-100%); /* Navigation ausblenden */
+  }
+}

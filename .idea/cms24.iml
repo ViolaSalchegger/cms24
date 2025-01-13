@@ -2,8 +2,11 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bk2k/bootstrap-package" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/derhansen/sf_event_mgt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/georgringer/news" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mask/mask" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/class-alias-loader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-backend" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-belog" />

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fef6f6;
+            min-height: 100vh; /* Damit der Footer immer am Ende bleibt */
+        }
+
+        .content{
+            flex: 1;
+        }
+
+        .footer {
+            background-color: mistyrose;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer .social-media {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer .social-media a {
+            display: flex;
+            flex-direction: column; // Links untereinander anordnen
+            gap: 10px; // Abstand zwischen den Links
+        }
+
+        .footer .logo {
+            text-align: center;
+        }
+
+        .footer .logo img {
+            height: 70px;
+        }
+
+        .footer .logo a {
+            text-decoration: none;
+            color: #5e2170;
+            display: block;
+            margin-top: 5px;
+            font-size: 18px;
+            &:hover {
+                color: violet; // Hover-Effekt: dunkleres Violett
+            text-decoration: violet; // Sicherstellen, dass beim Hover keine Unterstreichung erscheint
+            }
+        }
+
+        .footer .contact {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Elemente linksbündig */
+            gap: 8px; /* Abstand zwischen den Zeilen */
+        }
+
+        .footer .contact p {
+            margin: 5px 0;
+            font-size: 14px;
+            display: flex;
+
+        }
+
+        .contact strong {
+            text-align: left;
+        }
+
+        .footer .contact a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+
+</div>
+<footer class="footer">
+    <!-- Social Media Links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <div class="social-media-links">
+        <!-- TikTok Link mit Icon und Username -->
+        <a href="https://www.tiktok.com/@girlieteam" class="social-media-link" target="_blank">
+            <i class="fab fa-tiktok"></i> @girlieteam
+        </a>
+
+        <!-- Instagram Link mit Icon und Username -->
+        <a href="https://www.instagram.com/girlieskidemoteam" class="social-media-link" target="_blank">
+            <i class="fab fa-instagram"></i> @girlieskidemoteam
+        </a>
+    </div>
+
+
+
+
+    <!-- Logo and Impressum -->
+    <div class="logo">
+        <img src="fileadmin/user_upload/Girlie/Logo-girl.png" alt="Girlie Skiteam Logo">
+        <a href="http://cms24.s2310456034.student.kwmhgb.at/impressum">Impressum</a>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact">
+        <div class="contact-item">
+            <strong>Adresse:</strong>
+            <div>
+                Filzmooser Str. 15<br>
+                5532 Filzmoos
+            </div>
+        </div>
+        <div class="contact-item">
+            <strong>E-Mail:</strong>
+            <div>
+                info@skifilzmoos.at
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
