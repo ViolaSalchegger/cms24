@@ -51,3 +51,24 @@ button.navbar-toggler {
   }
 }
 
+.header-language {
+  font-size: 14px;          /* Schriftgröße */
+  font-weight: bold;        /* Fettgedruckt */
+  text-align: left;        /* Rechtsbündig */
+}
+
+.header-language a {
+  text-decoration: none;    /* Unterstreichung entfernen */
+  color: mistyrose;              /* Textfarbe */
+  margin: 0 5px;            /* Abstand zwischen den Links */
+  transition: color 0.3s;   /* Weicher Übergang bei Hover */
+}
+
+.header-language a:hover {
+  color: #5e2170;           /* Hover-Farbe (Beispiel: Blau) */
+}
+
+.header-language .active {
+  color: #5e2170;           /* Aktive Sprache hervorheben */
+  pointer-events: none;     /* Klick auf aktive Sprache deaktivieren */
+}

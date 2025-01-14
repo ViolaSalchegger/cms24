@@ -3,9 +3,13 @@
 <f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
+
 <header id="page-header" class="{headerClass}">
-    <div class="container container-mainnavigation">
+    <div class="container container-mainnavigation d-flex justify-content-between align-items-center">
+        <!-- Linke Seite: Logo -->
         <f:render partial="Header/Logo" arguments="{_all}" />
+
+        <!-- Mittlere Seite: Hauptnavigation -->
         <f:if condition="{mainnavigation}">
             <f:render partial="Header/Toggle" arguments="{_all}" />
             <nav aria-label="{f:translate(key: 'main-navigation.label', extensionName: 'bootstrap_package')}" id="mainnavigation" class="collapse navbar-collapse">
@@ -13,6 +17,14 @@
                 <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
                 <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
             </nav>
+        </f:if>
+
+        <!-- Rechte Seite: Sprachauswahl -->
+        <f:if condition="{theme.language.enable}">
+            <div class="header-language" style="display: flex; gap: 10px;">
+                <f:render partial="Navigation/Language" arguments="{_all}" />
+
+            </div>
         </f:if>
     </div>
 </header>

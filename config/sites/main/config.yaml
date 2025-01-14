@@ -9,18 +9,18 @@ languages:
     navigationTitle: Deutsch
     flag: at
     hreflang: ''
-    websiteTitle: ''
+    websiteTitle: 'Girlie Ski Demo Team'
   -
     title: English
     enabled: true
     locale: en_US
     hreflang: en-Us
     base: /en/
-    websiteTitle: Farming
+    websiteTitle: 'Girlie Ski Demo Team'
     navigationTitle: EN
     fallbackType: strict
     fallbacks: ''
     flag: en-us-gb
     languageId: 1
 rootPageId: 1
-websiteTitle: Landwirtschaft
+websiteTitle: GirlieSkiDemoTeam
