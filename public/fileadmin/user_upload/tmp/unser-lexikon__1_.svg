@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="384.986" height="335" viewBox="0 0 384.986 335">
+  <defs>
+    <style>.a{fill:#f3f3f2;}.b,.c,.d{fill:#02312c;font-family:UniversLTStd-BoldCn, Univers LT Std;font-weight:700;letter-spacing:0.027em;}.b{font-size:213px;}.c{font-size:185px;}.d{font-size:165px;}</style>
+  </defs>
+  <g transform="translate(-408 -2958)">
+    <circle class="a" cx="167.5" cy="167.5" r="167.5" transform="translate(426.993 2958)"></circle>
+    <text class="b" transform="translate(408 2998.462)">
+      <tspan x="0" y="154">A</tspan>
+    </text>
+    <text class="c" transform="translate(560.835 3055.411)">
+      <tspan x="0" y="134">B</tspan>
+    </text>
+    <text class="d" transform="translate(695.986 3024.629)">
+      <tspan x="0" y="119">C</tspan>
+    </text>
+  </g>
+</svg>
