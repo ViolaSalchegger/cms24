@@ -16,16 +16,23 @@
                 <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
                 <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
                 <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
+
+                <!-- Sprachauswahl für kleinere Bildschirme (unter 991px) -->
+                <f:if condition="{theme.language.enable}">
+                    <div class="footer-language d-block d-lg-none">
+                        <f:render partial="Navigation/Language" arguments="{_all}" />
+                    </div>
+                </f:if>
             </nav>
         </f:if>
 
-        <!-- Rechte Seite: Sprachauswahl -->
+        <!-- Sprachauswahl für größere Bildschirme (ab 992px) -->
         <f:if condition="{theme.language.enable}">
-            <div class="header-language" style="display: flex; gap: 10px;">
+            <div class="header-language d-none d-lg-flex" style="margin-left: auto;">
                 <f:render partial="Navigation/Language" arguments="{_all}" />
-
             </div>
         </f:if>
+
     </div>
 </header>
 
